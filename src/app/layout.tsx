@@ -1,4 +1,6 @@
 import './globals.css'
+import Navigation from "./Navigation";
+import { useState } from 'react'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className='bg-gray-900'>
+        <div className="flex flex-col relative min-h-screen">
+        <Navigation/>
+        {children}
+        </div>
+      </body>
     </html>
   )
 }
